@@ -13,10 +13,12 @@ namespace AnnotationsDemo
             Console.WriteLine("Employee class Validation: ");
 
             Employee objectEmployee = new Employee();
-            objectEmployee.Name = "Sharyu";
+            objectEmployee.FirstName = "Sharyu";
+            objectEmployee.LastName = "Raut";
             objectEmployee.Age = 19;
-            objectEmployee.PhoneNumber = "9988989";
+            objectEmployee.PhoneNumber = "+919876543210";
             objectEmployee.Email = "abc.xyz@gmail.com";
+            objectEmployee.password = "Sharyu#1243";
 
             ValidationContext context = new ValidationContext(objectEmployee, null, null);
             List<ValidationResult> results = new List<ValidationResult>();
@@ -32,7 +34,7 @@ namespace AnnotationsDemo
             }
             else
             {
-                Console.WriteLine("Name: " + objectEmployee.Name + "\n" + "Age: " + objectEmployee.Age + "\n" + "Phone Number: " + objectEmployee.PhoneNumber + "\n" +"Email: "+ objectEmployee.Email);
+                Console.WriteLine("First Name: " + objectEmployee.FirstName + "Last Name: " + objectEmployee.LastName + "\n" + "Age: " + objectEmployee.Age + "\n" + "Phone Number: " + objectEmployee.PhoneNumber + "\n" + "Email: "+ objectEmployee.Email + "\n" + "Password: " + objectEmployee.password);
             }
 
             Console.WriteLine("\nPress any key to exit..");
